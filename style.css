@@ -3,8 +3,26 @@ html {
     color: #333;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
 h1 {
     font-style: italic;
+    border-bottom: 2px solid rgb(181, 154, 237);
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid rgb(181, 154, 237);
+}
+
+table {
+    background-color: rgb(138, 219, 120);
+    width: 100%;
 }
 
 a {
@@ -19,16 +37,25 @@ a:hover {
     text-decoration: none;
 }
 
+article {
+    border-bottom: 2px solid rgb(181, 154, 237);
+}
+
 ul {
     list-style-type: square;
+    margin-bottom: 0;
 }
+ ol {
+    margin-bottom: 0;
+ }
 
 .position {
     font-weight: bold;
+    border-bottom: 2px solid rgb(181, 154, 237);
 }
 
 .bold-text {
     font-weight: bold;
     text-transform: uppercase;
+    background-color: rgb(181, 154, 237);
 }
-
