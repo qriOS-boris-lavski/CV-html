@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    font-family: IBM Plex Sans, Arial, Helvetica, sans-serif;
+    margin: 0;
+    max-width: 1024px;
+    justify-content: center;
+    color: #3B4256;
+    font-weight: 600;
+}
+
+input, select, textarea {
+    appearance: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #F8FAFC;
+}
+
+fieldset {
+    border: 2px solid #86A3B4;
+    border-radius: 10px;
+}
+
+textarea {
+    width: 400px;
+    height: 150px;
+    
+    border: 0;
+}
+
+span {
+    color: red;
+}
+
+input[type="email"] {
+    width: 200px;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    width: 92px;
+    height: 32px;
+    background: #0048D9;
+    color: white;
+    font-size: 20px;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background: #002266;
+}
+
+select {
+    width: 120px;
+    background:url(/images/Vector.svg) no-repeat right;
+}
+
+input:focus, select:focus, textarea:focus {
+    border: 1px solid #0048D9;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+.contacts {
+    border-collapse: collapse;
+}
+
+.contacts td {
+    border: 2px solid #86A3B4;
+    padding: 0;
+}
+
+
