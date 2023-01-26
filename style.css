@@ -1,0 +1,127 @@
+html {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    color: #263036;
+}
+
+body {
+    display: flex;
+    margin: 0;
+}
+
+header {
+    background: #86A3B4;
+    width: 30%;
+    font-weight: 600;
+}
+
+main {
+    border-left: 1px solid #1E1E1E;
+    width: 70%;
+}
+
+h2 {
+    margin: 0;
+    font-size: 40px;
+}
+
+h3 {
+    margin: 0 45px 28px 0;
+    padding-bottom: 28px;
+    font-size: 36px;
+    font-weight: 600;
+    border-bottom: 5px solid #1E1E1E;
+}
+
+h4 {
+    margin-right: 52px;
+    padding-bottom: 15px;
+    font-size: 32px;
+    border-bottom: 6px solid #1E1E1E;
+}
+
+img {
+    width: 100%;
+}
+
+dt {
+    margin-top: 36px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+dd {
+    margin: 0;
+    font-size: 16px;
+}
+
+a {
+    color: #1C2E8C;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3550d6;
+}
+
+table {
+    background-color: rgb(138, 219, 120);
+}
+
+article {
+    border-bottom: 2px solid rgb(181, 154, 237);
+}
+
+ul {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+span {
+    font-weight: 600;
+}
+
+.name-position {
+    margin-top: 60px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+.name {
+    color: #FFFFFF;
+}
+.surname {
+    color: #1C2E8C;
+}
+
+.position {
+    font-weight: bold;
+    border-bottom: 2px solid rgb(181, 154, 237);
+}
+
+.contacts-wrapper {
+    margin-left: 43px;
+}
+
+.language {
+    font-size: 20px;
+}
+
+.wrapper {
+    margin: 60px 55px;
+}
+
+.wrapper > div {
+    margin-bottom: 50px;
+}
+
+.summary > p {
+    margin: 28px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.job {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 17px;
+}

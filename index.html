@@ -4,132 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Curriculum Vitae</title>
 </head>
 <body>
     <header>
-        <h1>VASYL BORYSLAVSKYI</h1>
-        <img src="/images/cv_img.jpg" alt="candidate's photo" width="250px">
-
-        <p> <strong>Web developer</strong> </p>
-        <a href="/hire.html" target="_blank">OFFER A JOB</a>
-        <hr/>
+        <div class="name-position">
+            <h2 class="name">Vasyl</h2>
+            <h2 class="surname">Boryslavskyi</h2>
+            <!-- <p class="position">Web developer</p> -->
+        </div>
+        <div class="image-box">
+            <img src="/images/cv_img.jpg" alt="candidate's photo">
+        </div>
+        <div class="contacts-wrapper">
+            <div class="contacts">
+                <h4>Contact</h4>
+                <dl>
+                    <dt>Address</dt>
+                    <dd>Kyiv, Ukraine</dd>
+                    <dt>Phone</dt>
+                    <dd><a href="tel:+380635820966">+380635820966</a></dd>
+                    <dt>E-mail</dt>
+                    <dd><a href="mailto:v.borislavski@gmail.com">v.borislavski@gmai.com</a></dd>
+                    <dt>Linkedin</dt>
+                    <dd><a href="https://www.linkedin.com/in/vasyl-borislavski-590a97151/">www.linkedin.com/borislavski</a></dd>
+                </dl>
+            </div>
+            <div class="languages">
+                <h4>Languages</h4>
+                <p class="language">Ukrainian - C2</p>
+                <p class="language">English - B2</p>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section>
-            <h3>Work experience</h3>
-            <table border="1" cellpadding="10px" cellspacing="0">
-                <thead>
-                    <tr>
-                        <td><strong>Period:</strong></td>
-                        <th><strong>Position</strong></th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>2020 - present</td>
-                        <td>Individual entrepreneur</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="3"><strong>Description</strong></td>
-                        <td><em>Buy goods on the foreign markets</em></td>
-                        
-                    </tr>
-                    <tr>
-                        <td><em>Organise delivery to Ukraine from origin country of goods</em></td>
-                    </tr>
-                    <tr>
-                        <td><em>Sale goods on marketplaces <a href="https://rozetka.com.ua/" target="_blank">ROZETKA</a> and <a href="https://prom.ua/" target="_blank">Prom</a></em></td>
-                    </tr>
-                   
-
-                    <tr>
-                        <td>2019 - 2020</td>
-                        <td>Supply manager at <a href="https://etool.com.ua/" target="_blank">ORCS Ltd.</a><br>
-                            Powertools and consumables
-                        </td>
-                    </tr>
-                    <tr>
-                        <td rowspan="4"><strong>Description</strong></td>
-                        <td><em>Preparation of transportation documentation and search for carriers</em></td> 
-                    </tr>
-                    <tr>
-                        <td><em>Conclusion of contracts with suppliers and carriers and support of concluded contracts</em></td>
-                    </tr>
-                    <tr>
-                        <td><em>Cooperation with transport companies and brokers</em></td>
-                    </tr>
-                    <tr>
-                        <td><em>Calculation of the cost of goods from each delivery</em></td>
-                    </tr>
-
-
-                    <tr>
-                        <td>2017 - 2019</td>
-                        <td>Supply manager at <a href="https://deepnet.ua/" target="_blank">DeepNet Ukraine Ltd.</a><br>
-                            Telecommunications equipment for Internet providers
-                        </td>
-                    </tr>
-                    <tr>
-                        <td rowspan="5"><strong>Description</strong></td>
-                        <td><em>Market analysis, search for suppliers</em></td> 
-                    </tr>
-                    <tr>
-                        <td><em>Conducting negotiations and concluding contracts with suppliers and monitoring <br> concluded contracts</em></td>
-                    </tr>
-                    <tr>
-                        <td><em>Formation of orders, control of shipments</em></td>
-                    </tr>
-                    <tr>
-                        <td><em>Preparation of documents for customs clearance</em></td>
-                    </tr>
-                    <tr>
-                        <td><em>Cooperation with transport companies and brokers</em></td>
-                    </tr>
-
-
-                    <tr>
-                        <td>2016 - 2017</td>
-                        <td>Assistant of Supply manager at <a href="https://etalonk.com/" target="_blank">Etalon-K Ltd.</a> <br>
-                            Сeramics and sanitary ware
-                        </td>
-                    </tr>
-                    <tr>
-                        <td rowspan="3"><strong>Description</strong></td>
-                        <td><em>Formation and verification of accompanying documentation</em></td> 
-                    </tr>
-                    <tr>
-                        <td><em>Preparation of a package of documents for customs clearance of goods</em></td>
-                    </tr>
-                    <tr>
-                        <td><em>Creation of assortment of nomenclature</em></td>
-                    </tr>
-
-
-                    <tr>
-                        <td>2015 - 2016</td>
-                        <td>Sales manager at <a href="https://speak-up.com.ua/" target="_blank">SpeakUP</a><br>
-                            English language school
-                        </td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2"><strong>Description</strong></td>
-                        <td><em>Сustomer consultation</em></td> 
-                    </tr>
-                    <tr>
-                        <td><em>Sale of English language courses</em></td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </section>
-
-        <section>
-           <article>
-                <h3>Skills:</h3>
-
+        <section class="wrapper">
+            <div class="summary">
+                <h3>Summary</h3>
+                <p>I'm Individual entrepreneur now, and I was a Manager of foreign activity and Supply manager with 6 years of experience and all this time I've been helping 
+                    businesses to reach their goals. And now I'm junior Web Developer with different technical knowledges. I have experience with back-end (Node JS), front-end (JS, React) and I'm not going to stop and expand my knowledges.
+                    I'm highly motivated to become Web Developer.
+                </p>
+            </div>
+            <div class="skills">
+                <h3>Skills Highlights:</h3>
                 <ul>
                     <li>HTML</li>
                     <li>CSS</li>
@@ -137,18 +60,70 @@
                     <li>React</li>
                     <li>Node JS</li>
                 </ul>
-           </article>
-
-           <article>
-                <h3>Achievements:</h3>
-
-                <ol>
-                    <li>Started my own business</li>
-                    <li>Born Ukrainian</li>
-                    <li>Bought Bayraktar for Ukraine forces</li>
-                </ol>
-           </article>
-        </section>
+            </div>
+            <div class="work-experience">
+                <h3>Work experience</h3>
+                <div class="job">
+                    <p>
+                        <span>Name of employer:</span> Individual entrepreneur<br>
+                        <span>Dates of employment:</span> 2020 - present<br>
+                        <span>Job title:</span> Owner<br>
+                        <span>Project/Role description:</span> Buy goods on the foreign markets. Organise delivery to Ukraine from origin country of goods.
+                        Sale goods on marketplaces <a href="https://rozetka.com.ua/" target="_blank">ROZETKA</a> and <a href="https://prom.ua/" target="_blank">Prom.</a>
+                    </p>
+                </div>
+                <div class="job">
+                    <p>
+                        <span>Name of employer:</span> <a href="https://etool.com.ua/" target="_blank">ORCS Ltd.</a><br>
+                        <span>Dates of employment:</span> 2019 - 2021<br>
+                        <span>Job title:</span> Supply manager<br>
+                        <span>Project/Role description:</span> Preparation of transportation documentation and search for carriers. Conclusion of contracts with suppliers and carriers and support of concluded contracts.
+                        Cooperation with transport companies and brokers.
+                        Calculation of the cost of goods from each delivery.
+                    </p>
+                </div>
+                <div class="job">
+                    <p>
+                        <span>Name of employer:</span> <a href="https://deepnet.ua/" target="_blank">DeepNet Ukraine Ltd.</a><br>
+                        <span>Dates of employment:</span> 2017 - 2019<br>
+                        <span>Job title:</span> Supply manager<br>
+                        <span>Project/Role description:</span> Market analysis, search for suppliers.
+                        Conducting negotiations and concluding contracts with suppliers and monitoring concluded contracts.
+                        Formation of orders, control of shipments.
+                        Preparation of documents for customs clearance.
+                        Cooperation with transport companies and brokers.
+                    </p>
+                </div>
+                <div class="job">
+                    <p>
+                        <span>Name of employer:</span> <a href="https://etalonk.com/" target="_blank">Etalon-K Ltd.</a><br>
+                        <span>Dates of employment:</span> 2016 - 2017<br>
+                        <span>Job title:</span> Assistant of Supply manager<br>
+                        <span>Project/Role description:</span> Formation and verification of accompanying documentation.
+                        Preparation of a package of documents for customs clearance of goods.
+                        Creation of assortment of nomenclature.
+                    </p>
+                </div>
+                <div class="job">
+                    <p>
+                        <span>Name of employer:</span> <a href="https://speak-up.com.ua/" target="_blank">SpeakUP</a><br>
+                        <span>Dates of employment:</span> 2015 - 2016<br>
+                        <span>Job title:</span> Sales manager<br>
+                        <span>Project/Role description:</span> Customer consultation.
+                        Sale of English language courses.
+                    </p>
+                </div>
+            </div>
+            <div class="education">
+                <h3>Education</h3>
+                <div class="education-item">
+                    <p>
+                        <span>Dates of studying:</span> from 2010 – to 2015<br>
+                        <span>Name of institution:</span> National university of food technologies<br>
+                        <span>Degree and major:</span> MS, Manager of foreign activity
+                    </p>
+                </div>
+            </div>
     </main>
 </body>
 </html>
