@@ -9,6 +9,7 @@ body {
 }
 
 header {
+    position: fixed;
     background: #86A3B4;
     width: 30%;
     font-weight: 600;
@@ -16,6 +17,7 @@ header {
 
 main {
     border-left: 1px solid #1E1E1E;
+    margin-left: 30%;
     width: 70%;
 }
 
@@ -55,12 +57,15 @@ dd {
 }
 
 a {
+    cursor: pointer;
     color: #1C2E8C;
     text-decoration: none;
+    
 }
 
 a:hover {
     color: #3550d6;
+    
 }
 
 table {
@@ -124,4 +129,16 @@ span {
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 17px;
+}
+
+.offer-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.offer-btn:hover {
+    color: rgb(252, 185, 60);
 }
