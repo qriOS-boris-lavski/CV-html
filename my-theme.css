@@ -1,0 +1,9 @@
+.my-theme {
+    --main-text-color:#d2d7dc;
+    --name-color: #22c44b;
+    --surname-color-link: #f0ea29;
+    --header-background-color: #7e33bc;
+    --main-background-color: #2f2a2a;
+    --border-color: #FFFFFF;
+    --link-color-hover: #f39735;
+}
