@@ -1,21 +1,21 @@
 :root {
     --reset-margin-padding: 0;
-    --ul-margin: 15px;
+    --ul-margin: 0.94rem;
 
     /* header's sizes*/
-    --header-main-margin: 40px;
-    --header-datalist-top: 36px;
-    --header-top-margin: 60px;
-    --header-right-margin: 52px;
-    --header-padding: 15px;
-    --header-datalist-top: 36px;
-    --header-datalist-bottom: 10px;
+    --header-main-margin: 2.5rem;
+    --header-datalist-top: 2.25rem;
+    --header-top-margin: 3.75rem;
+    --header-right-margin: 3.25rem;
+    --header-padding: 0.94rem;
+    --header-datalist-top: 2.25rem;
+    --header-datalist-bottom: 0.625rem;
 
     /* main's sizes*/
-    --main-title-margin: 0 45px 28px 0;
-    --main-margin-padding: 30px;
-    --main-wrapper-margin: 60px 55px;
-    --main-wrapper-bottom: 50px;
+    --main-title-margin: 0 2.8rem 1.75rem 0;
+    --main-margin-padding: 1.88rem;
+    --main-wrapper-margin: 3.75rem 3.4rem;
+    --main-wrapper-bottom: 3.13rem;
 }
 
 html {
@@ -24,6 +24,7 @@ html {
 
 body {
     display: flex;
+    
     margin: var(--reset-margin-padding);
     color: var(--main-text-color);
 }
@@ -99,6 +100,7 @@ span {
     margin-top: var(--header-top-margin);
     margin-left: var(--header-main-margin);
     margin-bottom: var(--header-main-margin);
+    margin-right: 50px;
 }
 
 .name {
@@ -141,4 +143,59 @@ span {
     margin-bottom: var(--main-margin-padding);
     font-size: 14px;
     line-height: 17px;
+}
+
+.offer-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.offer-btn:hover {
+    color: rgb(252, 185, 60);
+    font-weight: 900;
+}
+
+@media (orientation: landscape) {
+    header {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobiles */
+@media screen and (max-width: 570px){
+    body {
+        flex-direction: column;
+    }
+
+    header, main {
+        width: 100%;
+    }
+}
+
+@media (min-width: 660px) {
+    header {
+        width: 40%;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    main {
+        width: 60%;
+    }
+}
+
+/* Tabs */
+@media (min-width: 750px) and (max-width:850px){
+    header {
+        width: 40%;
+    }
+
+    main {
+        width: 60%;
+    }
 }
