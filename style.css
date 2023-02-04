@@ -175,7 +175,7 @@ span {
     }
 }
 
-@media (min-width: 660px) {
+@media (min-width: 660px) and (max-width:749px) {
     header {
         width: 40%;
     }
