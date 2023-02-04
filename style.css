@@ -24,7 +24,6 @@ html {
 
 body {
     display: flex;
-    
     margin: var(--reset-margin-padding);
     color: var(--main-text-color);
 }
@@ -33,6 +32,7 @@ header {
     background: var(--header-background-color);
     width: 30%;
     font-weight: 600;
+    box-shadow: 10px 0 50px gray;
 }
 
 main {
@@ -63,6 +63,12 @@ h4 {
 
 img {
     width: 100%;
+}
+
+img:hover {
+    transform: scale(1.6)
+    translate(18%);
+    box-shadow: 10px 10px 20px rgb(73, 69, 69);
 }
 
 dt {
@@ -139,10 +145,19 @@ span {
     font-weight: bold;
 }
 
+.job-wrapper > div:not(:first-child) {
+    opacity: 0.7;
+}
+
+.job-wrapper > div:hover {
+    opacity: 1;
+}
+
 .job {
     margin-bottom: var(--main-margin-padding);
     font-size: 14px;
     line-height: 17px;
+    cursor: default;
 }
 
 .offer-btn {
@@ -172,12 +187,19 @@ span {
 
     header, main {
         width: 100%;
+        box-shadow: none;
+    }
+
+    img:hover {
+        transform: none;
+        box-shadow: none;
     }
 }
 
-@media (min-width: 660px) {
+@media (min-width: 660px) and (max-width:749px) {
     header {
         width: 40%;
+        box-shadow: none;
     }
 
     h2 {
@@ -187,12 +209,18 @@ span {
     main {
         width: 60%;
     }
+
+    img:hover {
+        transform: none;
+        box-shadow: none;
+    }
 }
 
 /* Tabs */
 @media (min-width: 750px) and (max-width:850px){
     header {
         width: 40%;
+        box-shadow: none;
     }
 
     main {
