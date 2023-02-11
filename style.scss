@@ -1,6 +1,10 @@
 @import 'main-theme';
 @import 'my-theme';
 
+@mixin emergenceRolling ($sec) {
+    animation: emergence $sec linear;
+}
+
 :root {
     --reset-margin-padding: 0;
     --ul-margin: 0.94rem;
@@ -37,13 +41,13 @@ header {
     font-weight: 600;
     box-shadow: 10px 0 50px gray;
     border-right: 1px solid var(--border-color);
-    @include emergenceRolling(1.5s)
+    @include emergenceRolling (1.5s);
 }
 
 main {
     width: 70%;
     background: var(--main-background-color);
-    @include emergenceRolling(2s);
+    @include emergenceRolling (2s);
 }
 
 h2 {
@@ -254,6 +258,3 @@ span {
     }
 }
 
-@mixin emergenceRolling ($sec) {
-    animation: emergence $sec linear;
-}
