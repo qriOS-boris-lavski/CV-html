@@ -2,43 +2,89 @@ body {
     display: flex;
     font-family: IBM Plex Sans, Arial, Helvetica, sans-serif;
     margin: 0;
-    max-width: 1024px;
     justify-content: center;
-    color: #3B4256;
+    align-items: center;
+    color: #586472;
     font-weight: 600;
 }
 
 input, select, textarea {
     appearance: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    height: 24px;
+    width: calc(100% - 24px);
+    padding: 12px;
     background-color: #F8FAFC;
+    font-size: 16px;
+    color: #3B4256;
+}
+
+main {
+    max-width: 1024px;
+    margin: 50px;
+    padding: 40px;
+    border: 1px solid #F2ECFF;
+    border-radius: 12px;
+}
+
+h1 {
+    margin-top: 0;
+    font-weight: bold;
+}
+
+h3 {
+    color: #B8BCCA;
+    margin-bottom: 5px;
+}
+
+table {
+    margin: 0;
+}
+
+form {
+    margin-top: 20px;
+    width: 100%;
 }
 
 fieldset {
-    border: 2px solid #86A3B4;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #F2ECFF;
+    border-radius: 12px;
 }
 
+fieldset > * {
+    display: block;
+}
+
+legend {
+    font-size: 1.17em;
+    color: #B8BCCA;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #6F7482;
+}
+
+
 textarea {
-    width: 400px;
-    height: 150px;
-    
+    font-family: IBM Plex Sans;
+    height: 100px;
     border: 0;
+    color: #3B4256;
 }
 
 span {
     color: red;
 }
 
-input[type="email"] {
-    width: 200px;
-}
-
 input[type="submit"] {
-    cursor: pointer;
-    width: 92px;
-    height: 32px;
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
     background: #0048D9;
     color: white;
     font-size: 20px;
@@ -46,13 +92,23 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
+    cursor: pointer;
     background: #002266;
 }
 
 select {
-    width: 120px;
-    background:url(/images/Vector.svg) no-repeat right;
+    background: url(/images/Vector.svg) no-repeat 97% 50%,
+                #F8FAFC;
+
+    height: 50px;
+    width: 100%;
 }
+
+select:invalid {
+    color: #B8BCCA;
+    border: 1px solid red;
+}
+
 
 input:focus, select:focus, textarea:focus {
     border: 1px solid #0048D9;
@@ -62,13 +118,28 @@ input:invalid {
     border: 1px solid red;
 }
 
+input[type="email"]:invalid+.error,
+select:invalid+.error {
+    display: block;
+}
+
+::placeholder {
+    font-size: 16px;
+    color: #B8BCCA;
+}
 .contacts {
-    border-collapse: collapse;
+    border: 2px solid #F2ECFF;
+    border-radius: 12px;
+    padding: 20px;  
 }
 
-.contacts td {
-    border: 2px solid #86A3B4;
-    padding: 0;
+.contacts td.data {
+    padding-left: 250px;
+    padding-right: 50%;
 }
 
+.error {
+    display: none;
+    font-size: 12px;
+}
 

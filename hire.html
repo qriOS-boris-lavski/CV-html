@@ -17,36 +17,32 @@
 
         <table class="contacts">
             <tr>
-                <td><strong>Phone</strong></td>
-                <td>+380635820966</td>
+                <td><strong>Phone:</strong></td>
+                <td class="data">+380635820966</td>
             </tr>
             <tr>
-                <td><strong>Address</strong></td>
-                <td>Kyiv, Ukraine</td>
+                <td><strong>Address: </strong></td>
+                <td class="data">Kyiv, Ukraine</td>
             </tr>
         </table>
 
        <form action="/hire.html" method="get">
          <fieldset>
             <legend>Contact form</legend>
-            <table>
-               <tr>
-                    <td><label for="candidateEmail">E-mail<span>*</span>:</label></td>
-                    <td><input type="email" name="email" id="candidateEmail" required></td>
-               </tr>
-                <tr>
-                    <td valign="top"><label for="description">Description:</label></td>
-                    <td><textarea name="description" id="description" spellcheck></textarea></td>
-                </tr>
-                <tr>
-                    <td><label for="workType">Work type:</label></td>
-                    <td><select name="workType" id="workType">
-                        <option value="officeWork">Office work</option>
-                        <option value="remoteWork">Remote work</option>
-                        <option value="onetimeProject">One-time project</option>
-                    </select></td>
-                </tr>
-            </table> 
+                <label for="candidateEmail">Email<span>*</span>:</label>
+                <input type="email" name="email" id="candidateEmail" placeholder="mail@mail.com" required>
+                <span class="error">Put your Email</span>
+                <label for="description">Description:</label>
+                <textarea name="description" id="description" spellcheck placeholder="Describe a task (optionaly)"></textarea>
+
+                <label for="workType">Work type<span>*</span>:</label>
+                <select name="workType" id="workType" required>
+                    <option value="" disabled selected hidden>-- choose a work type --</option>
+                    <option value="officeWork">Office work</option>
+                    <option value="remoteWork">Remote work</option>
+                    <option value="onetimeProject">One-time project</option>
+                </select>
+                <span class="error">Choose one option</span>
             <input type="submit" value="Hire me">          
         </fieldset>
        </form>
