@@ -127,3 +127,15 @@ span {
     font-size: 14px;
     line-height: 17px;
 }
+
+.offer-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.offer-btn:hover {
+    color: rgb(252, 185, 60);
+}
