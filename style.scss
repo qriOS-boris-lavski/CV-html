@@ -1,0 +1,260 @@
+@import 'main-theme';
+@import 'my-theme';
+
+@mixin emergenceRolling ($sec) {
+    animation: emergence $sec linear;
+}
+
+:root {
+    --reset-margin-padding: 0;
+    --ul-margin: 0.94rem;
+
+    /* header's sizes*/
+    --header-main-margin: 2.5rem;
+    --header-datalist-top: 2.25rem;
+    --header-top-margin: 3.75rem;
+    --header-right-margin: 3.25rem;
+    --header-padding: 0.94rem;
+    --header-datalist-top: 2.25rem;
+    --header-datalist-bottom: 0.625rem;
+
+    /* main's sizes*/
+    --main-title-margin: 0 2.8rem 1.75rem 0;
+    --main-margin-padding: 1.88rem;
+    --main-wrapper-margin: 3.75rem 3.4rem;
+    --main-wrapper-bottom: 3.13rem;
+}
+
+html {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    margin: var(--reset-margin-padding);
+    color: var(--main-text-color);
+}
+
+header {
+    background: var(--header-background-color);
+    width: 30%;
+    font-weight: 600;
+    box-shadow: 10px 0 50px gray;
+    border-right: 1px solid var(--border-color);
+    @include emergenceRolling (1.5s);
+}
+
+main {
+    width: 70%;
+    background: var(--main-background-color);
+    @include emergenceRolling (2s);
+}
+
+h2 {
+    margin: var(--reset-margin-padding);
+    font-size: 40px;
+}
+
+h3 {
+    margin: var(--main-title-size);
+    padding-bottom: var(--main-margin-padding);
+    font-size: 36px;
+    font-weight: 600;
+    border-bottom: 5px solid var(--border-color);
+}
+
+h4 {
+    margin-right: var(--header-right-margin);
+    padding-bottom: var(--header-padding);
+    font-size: 32px;
+    border-bottom: 6px solid var(--border-color);
+}
+
+img {
+    width: 100%;
+    transition: transform .5s;
+
+    &:hover {
+    transform: scale(1.5);
+    translate:25%;
+    box-shadow: 10px 10px 20px rgb(73, 69, 69);
+    }   
+}
+
+dt {
+    margin-top: var(--header-datalist-top);
+    margin-bottom: var(--header-datalist-bottom);
+    font-size: 24px;
+}
+
+dd {
+    margin: var(--reset-margin-padding);
+    font-size: 16px;
+}
+
+a {
+    color: var(--surname-color-link);
+    text-decoration: none;
+
+    &:hover {
+    color: var(--link-color-hover);
+    }
+}
+
+ul {
+    margin-bottom: var(--reset-margin-padding);
+    margin-left: var(--ul-margin);
+    padding: var(--reset-margin-padding);
+    font-weight: bold;
+}
+
+span {
+    font-weight: 600;
+}
+
+.name-position {
+    margin-top: var(--header-top-margin);
+    margin-left: var(--header-main-margin);
+    margin-bottom: var(--header-main-margin);
+    margin-right: 50px;
+}
+
+.name {
+    color: var(--name-color);
+}
+.surname {
+    color: var(--surname-color-link);
+}
+
+.position {
+    font-weight: bold;
+    border-bottom: 2px solid rgb(181, 154, 237);
+}
+
+.contacts-wrapper {
+    margin-left: var(--header-main-margin);
+}
+
+.language {
+    font-size: 20px;
+}
+
+.wrapper {
+    margin: var(--main-wrapper-margin);
+}
+
+.wrapper > div {
+    margin-bottom: var(--main-wrapper-bottom);
+}
+
+.summary > p {
+    margin: var(--main-margin-padding);
+    margin-left: var(--reset-margin-padding);
+    margin-right: var(--reset-margin-padding);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.job-wrapper {
+    >div {
+        &:not(:first-child) {
+            opacity: 0.7;
+            transition: .5s ease-in;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.job {
+    margin-bottom: var(--main-margin-padding);
+    font-size: 14px;
+    line-height: 17px;
+    cursor: default;
+}
+
+.offer-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 20px;
+
+    &:hover {
+        color: rgb(252, 185, 60);
+        font-weight: 900;
+    }
+}
+
+@media (orientation: landscape) {
+    header {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobiles */
+@media screen and (max-width: 570px){
+    body {
+        flex-direction: column;
+    }
+
+    header, main {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    img:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+@media (min-width: 660px) and (max-width:749px) {
+    header {
+        width: 40%;
+        box-shadow: none;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    main {
+        width: 60%;
+    }
+
+    img:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+/* Tabs */
+@media (min-width: 750px) and (max-width:850px){
+    header {
+        width: 40%;
+        box-shadow: none;
+    }
+
+    main {
+        width: 60%;
+    }
+}
+
+@keyframes emergence {
+    0%{
+        position: fixed;
+        margin-top: 100vh;
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.001;
+    }
+    100%{
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
