@@ -109,6 +109,9 @@ select:invalid {
     border: 1px solid red;
 }
 
+select:valid, input:valid {
+    border: 1px solid #0E6245;
+}
 
 input:focus, select:focus, textarea:focus {
     border: 1px solid #0048D9;
@@ -120,6 +123,11 @@ input:invalid {
 
 input[type="email"]:invalid+.error,
 select:invalid+.error {
+    display: block;
+}
+
+input[type="email"]:valid ~ .success,
+select:valid ~ .success {
     display: block;
 }
 
@@ -137,9 +145,16 @@ select:invalid+.error {
     padding-left: 250px;
     padding-right: 50%;
 }
-
+.success {
+    display: none;
+    font-size: 12px;
+    color: #0E6245;
+}
 .error {
     display: none;
     font-size: 12px;
+    color: red;
 }
+
+
 
