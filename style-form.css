@@ -1,20 +1,11 @@
 body {
+    display: flex;
     font-family: IBM Plex Sans, Arial, Helvetica, sans-serif;
     margin: 0;
-    max-width: 1024px;
-    color: #3B4256;
+    justify-content: center;
+    align-items: center;
+    color: #586472;
     font-weight: 600;
-}
-
-main {
-    position: fixed;
-    top: calc(50% - 225px);
-    left: calc(50% - 275px);
-    animation: sized 2s ease-in-out;
-}
-
-h1 {
-    margin-top: 0;
 }
 
 input, select, textarea {
@@ -80,8 +71,8 @@ label {
 
 
 textarea {
-    width: 400px;
-    height: 150px;
+    font-family: IBM Plex Sans;
+    height: 100px;
     border: 0;
     color: #3B4256;
 }
@@ -165,17 +156,5 @@ select:valid ~ .success {
     color: red;
 }
 
-@keyframes sized {
-    0%{
-        transform: scale(2);
-        opacity: 0;
-    }
-    50%{
-        transform: scale(0.5);
-        opacity: 0.5;
-    }
-    100%{
-        transform: scale(1);
-        opacity: 1;
-    }
-}
+
+

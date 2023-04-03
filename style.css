@@ -83,8 +83,9 @@ h4 {
 img {
   width: 100%;
   transition: transform 0.5s;
+  cursor: pointer;
 }
-img:hover {
+.img_cv {
   transform: scale(1.5);
   translate: 25%;
   box-shadow: 10px 10px 20px rgb(73, 69, 69);
@@ -189,6 +190,13 @@ span {
 .offer-btn:hover {
   color: rgb(252, 185, 60);
   font-weight: 900;
+}
+
+.nav-c, .nav-l, .nav-t, .nav-s, .nav-w, .nav-e {
+  border: 1px solid black;
+  padding: 2px 0 2px 0;
+  cursor: pointer;
+  color: var(--surname-color-link);
 }
 
 @media (orientation: landscape) {
