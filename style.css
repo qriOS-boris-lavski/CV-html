@@ -192,7 +192,7 @@ span {
   font-weight: 900;
 }
 
-.nav-c, .nav-l, .nav-t, .nav-s, .nav-w, .nav-e {
+.nav-c, .nav-l, .nav-t, .nav-s, .nav-w, .nav-e, .nav-p {
   border: 1px solid black;
   padding: 2px 0 2px 0;
   cursor: pointer;
