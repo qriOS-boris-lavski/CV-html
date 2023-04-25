@@ -15,28 +15,56 @@ document.addEventListener('keydown', (event) => {
     }
 })
 
-async function showRepos() {
-    const repos = await fetch('https://api.github.com/users/qriOS-boris-lavski/repos');
-    const reposData = await repos.json();
+class GithubApi {
+  constructor(token, username) {
+    this.token = token;
+    this.username = username;
+    this.baseUrl = `https://api.github.com/users/${this.username}/repos`;
+  }
 
-    reposData.forEach(repo => {
-        const items = document.querySelector('.my-projects');
-        let item = document.createElement('li');
-        items.appendChild(item);
+async getRepos() {
+    const response = await fetch(this.baseUrl, {
+      headers: {
+        'Authorization': `Token ${this.token}`,
+      },
+    });
 
-        let a = document.createElement('a');
-        a.href = repo.html_url;
-        a.target = '_blank';
-        a.innerHTML = repo.full_name;
-        item.appendChild(a);
-        
-        if (repo.description) {
-            let p = document.createElement('p');
-            p.innerHTML = repo.description;
-            item.appendChild(p);
-        }
-    })
+    if (!response.ok) {
+      throw new Error(`Failed to fetch repos: ${response.status}`);
+    }
+
+    const repos = await response.json();
+    return repos;
+  }
 }
+
+const token = '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';
+const username = 'qriOS-boris-lavski';
+
+const api = new GithubApi(token, username);
+
+async function showRepos() {
+  const reposData = await api.getRepos();
+
+  reposData.forEach((repo) => {
+    const items = document.querySelector('.my-projects');
+    let item = document.createElement('li');
+    items.appendChild(item);
+
+    let a = document.createElement('a');
+    a.href = repo.html_url;
+    a.target = '_blank';
+    a.innerHTML = repo.full_name;
+    item.appendChild(a);
+
+    if (repo.description) {
+      let p = document.createElement('p');
+      p.innerHTML = repo.description;
+      item.appendChild(p);
+    }
+  });
+}
+
 window.onload = function () {
-    showRepos();
+  showRepos();
 };
