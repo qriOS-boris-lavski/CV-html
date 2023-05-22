@@ -38,7 +38,7 @@ async getRepos() {
   }
 }
 
-const token = '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';
+const token = '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';
 const username = 'qriOS-boris-lavski';
 
 const api = new GithubApi(token, username);
@@ -60,6 +60,8 @@ async function showRepos() {
     if (repo.description) {
       let p = document.createElement('p');
       p.innerHTML = repo.description;
+      p.style.fontStyle = 'italic';
+      p.style.fontSize = '15px';
       item.appendChild(p);
     }
   });
